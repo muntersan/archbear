@@ -1,0 +1,35 @@
+.site-header {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--menu-height);
+    background-color: darkcyan; //temp
+
+    &__inner {
+        grid-column: inner;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+.languages {
+
+    &__list {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+}
+

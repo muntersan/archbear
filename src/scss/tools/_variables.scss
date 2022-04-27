@@ -17,8 +17,8 @@
     //colors
     --color-accent: cadetblue;
     --color-light: #fff;
-    --color-medium: #666;
-    --color-dark: #333;
+    --color-medium: #707070;
+    --color-dark: #313131;
 
     //section gaps
     --section-gap: 8rem;
@@ -29,7 +29,7 @@
     --grid-gap: 3rem;
 
     //page settings
-    --page-width: 78rem;
+    --page-width: 100%;
     --page-padding: 30px;
 
     //content settings
@@ -37,7 +37,7 @@
     --content-width-small: 40rem;
 
     //menu settings
-    --menu-height: 100px;
+    --menu-height: 90px;
 
     //grids
     --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0,var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
