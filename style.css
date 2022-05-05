@@ -1,5 +1,5 @@
 :root {
-  --font-sans: "sans-serif";
+  --font-sans: "Lexend", "sans-serif";
   --font-serif: serif;
   --font-base: 1rem;
   --font-scale: 1.25;
@@ -41,6 +41,11 @@ img {
   max-width: 100%;
 }
 
+body {
+  font-family: var(--font-sans);
+  color: var(--color-dark);
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
 }
@@ -71,7 +76,10 @@ h6 {
 
 p, a, li {
   line-height: 1.5;
-  font-family: var(--font-serif);
+}
+
+a {
+  text-decoration: none;
 }
 
 .site-header {
@@ -95,11 +103,31 @@ p, a, li {
   align-items: center;
 }
 
+.languages {
+  margin-right: 4rem;
+}
 .languages__list {
   display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
+}
+.languages__item {
+  font-weight: 200;
+  color: var(--color-light);
+}
+.languages__item::after {
+  content: "/";
+  margin: 0.5rem;
+}
+.languages__item:last-of-type::after {
+  display: none;
+}
+.languages__item--current {
+  font-weight: 600;
+}
+.languages__link {
+  color: var(--color-light);
 }
 
 .menu-button {
