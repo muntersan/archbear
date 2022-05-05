@@ -2,11 +2,11 @@
     display: grid;
     grid-template-columns: var(--grid-container);
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100%;
     height: var(--menu-height);
-    background-color: darkcyan; //temp
 
     &__inner {
         grid-column: inner;
