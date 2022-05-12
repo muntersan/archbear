@@ -10,3 +10,19 @@
         margin: 1rem 0;
     }
 }
+
+@mixin large() {
+    font-size: var(--font-size-3);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    &::before{
+        content: '';
+        width: 50px;
+        height: 2px;
+        background-color: var(--color-dark);
+        display: block;
+        margin: 0 2rem 0 0;
+    }
+}

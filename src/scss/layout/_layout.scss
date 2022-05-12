@@ -1,0 +1,22 @@
+@use '../components/title';
+
+.section {
+    margin: var(--section-gap) 0;
+    display: grid;
+    padding: 0 30px; //instead of using grid container
+    grid-template-columns: var(--grid-content);
+    gap: var(--grid-gap);
+
+    &__header{
+        grid-column: wide
+    }
+
+    &__title {
+        @include title.large;
+    }
+
+    &__content{
+        grid-column: content;
+    }
+
+}
