@@ -22,7 +22,7 @@
         align-items: center;
     }
 
-    &--scrolled{
+    &--scrolled, &--menu-opened{
         background-color: var(--color-light);
 
         .languages{
