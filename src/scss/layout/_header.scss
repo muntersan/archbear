@@ -7,6 +7,7 @@
     left: 0;
     width: 100%;
     height: var(--menu-height);
+    transition: all 0.2s;
 
     &__inner {
         grid-column: inner;
@@ -19,6 +20,26 @@
     &__buttons {
         display: flex;
         align-items: center;
+    }
+
+    &--scrolled{
+        background-color: var(--color-light);
+
+        .languages{
+            &__item{
+                &::after{
+                    color: var(--color-dark);
+                }
+            }
+            &__link{
+                color: var(--color-dark);
+            }
+        }
+
+        .branding{
+            fill: var(--color-dark);
+        }
+        
     }
 
 }

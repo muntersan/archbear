@@ -1,26 +1,19 @@
 @use '../components/title'; 
 
 .hero {
-    display: grid;
-    grid-template-columns: var(--grid-container);
+    //display: grid;
+    //grid-template-columns: var(--grid-container);
     min-height: 100vh;
-    background-image: url(assets/images/hero@2x.jpg);
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    //background-image: url(assets/images/hero@2x.jpg);
+    //background-size: cover;
+    //background-position: center;
     position: relative;
 
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        background-color: var(--color-dark);
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        opacity: 0.4;
-
+    .anchor-name{
+        visibility: hidden;
     }
+  
 
     &::after{
         content: '';
@@ -30,25 +23,53 @@
         width: 100px;
         top: 0;
         bottom: 0;
+        z-index: 2;
     }
+
+   
     
 
     &__inner {
-        grid-column: inner;
-        display: grid;
-        grid-template-columns: var(--grid-content);
-        gap: var(--grid-gap);
-        align-items: center;
+        // grid-column: inner;
+        // display: grid;
+        // grid-template-columns: var(--grid-content);
+        // gap: var(--grid-gap);
+        // align-items: center;
     }
 
     &__content{
+
+        display: grid;
+        grid-template-columns: var(--grid-content);
+        align-items: center;
         z-index: 2;
         position: relative;
-        grid-column: wide;
-        max-width: var(--content-width);
+        max-width: 100%;
         width: 100%;
         color: var(--color-light);
+        background-size: cover;
+        background-position: center;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: var(--color-dark);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.4;
+            z-index: 1;
+    
+        }
        
+    }
+
+    &__text{
+        grid-column: wide;
+        position: relative;
+        z-index: 2;
     }
 
     &__title {
@@ -118,6 +139,7 @@
         width: 100%;
         padding: 4rem 9rem 4rem 5rem;
         z-index: 5;
+        color: var(--color-dark);
     }
 
     &__title {

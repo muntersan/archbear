@@ -219,6 +219,7 @@ strong {
   left: 0;
   width: 100%;
   height: var(--menu-height);
+  transition: all 0.2s;
 }
 .site-header__inner {
   grid-column: inner;
@@ -229,6 +230,18 @@ strong {
 .site-header__buttons {
   display: flex;
   align-items: center;
+}
+.site-header--scrolled {
+  background-color: var(--color-light);
+}
+.site-header--scrolled .languages__item::after {
+  color: var(--color-dark);
+}
+.site-header--scrolled .languages__link {
+  color: var(--color-dark);
+}
+.site-header--scrolled .branding {
+  fill: var(--color-dark);
 }
 
 .languages {
@@ -322,24 +335,12 @@ strong {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: var(--grid-container);
   min-height: 100vh;
-  background-image: url(assets/images/hero@2x.jpg);
-  background-size: cover;
-  background-position: center;
+  width: 100%;
   position: relative;
 }
-.hero::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: var(--color-dark);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.4;
+.hero .anchor-name {
+  visibility: hidden;
 }
 .hero::after {
   content: "";
@@ -349,21 +350,36 @@ strong {
   width: 100px;
   top: 0;
   bottom: 0;
-}
-.hero__inner {
-  grid-column: inner;
-  display: grid;
-  grid-template-columns: var(--grid-content);
-  gap: var(--grid-gap);
-  align-items: center;
+  z-index: 2;
 }
 .hero__content {
+  display: grid;
+  grid-template-columns: var(--grid-content);
+  align-items: center;
   z-index: 2;
   position: relative;
-  grid-column: wide;
-  max-width: var(--content-width);
+  max-width: 100%;
   width: 100%;
   color: var(--color-light);
+  background-size: cover;
+  background-position: center;
+}
+.hero__content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--color-dark);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.4;
+  z-index: 1;
+}
+.hero__text {
+  grid-column: wide;
+  position: relative;
+  z-index: 2;
 }
 .hero__title {
   font-weight: 200;
@@ -422,6 +438,7 @@ strong {
   width: 100%;
   padding: 4rem 9rem 4rem 5rem;
   z-index: 5;
+  color: var(--color-dark);
 }
 .slider__title {
   font-size: var(--font-size-2);
@@ -509,6 +526,7 @@ strong {
   gap: var(--grid-gap);
   overflow-x: auto;
   margin-top: var(--section-gap);
+  overflow: hidden;
 }
 
 .project {
