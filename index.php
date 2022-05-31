@@ -8,12 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/style.css">
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/slider.js" defer ></script>
-    <script src="js/scroll.js" defer></script>
-    <script src="js/menu.js" defer></script>
+    
+
+    <?php wp_head(); ?>
 
 </head>
 <body>
@@ -59,7 +56,7 @@
         <nav class="site-menu">
             <div class="site-menu__inner">
                 <figure class="site-menu__image">
-                    <img src="assets/images/menu@2x.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu@2x.jpg" alt="">
                 </figure>
                 <div class="menu">
                     <ul class="menu__list">
@@ -85,7 +82,7 @@
             <div class="hero__inner slider-wrapper swiper-wrapper">
 
                 <!-- slide 1 -->
-                <div class="hero__content swiper-slide" style="background-image: url(assets/images/hero@2x.jpg);">
+                <div class="hero__content swiper-slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/hero@2x.jpg);">
                     <div class="anchor-name"> <strong>City Hall</strong>  - München</div>
                     <div class="hero__text">
                         <h2 class="hero__title">Modern <br> <strong>Architecture</strong></h2>
@@ -102,7 +99,7 @@
                 </div>
 
                 <!-- slide 2 -->
-                <div class="hero__content swiper-slide" style="background-image: url(assets/images/hero-2@2x.jpg);">
+                <div class="hero__content swiper-slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/hero-2@2x.jpg);">
                     <div class="anchor-name"> <strong>Beach Villas</strong>  - Florida</div>
                     <div class="hero__text">
                         <h2 class="hero__title">Beach Villas <br> <strong>in sunny florida</strong></h2>
@@ -119,7 +116,7 @@
                 </div>
 
                 <!-- slide 3 -->
-                <div class="hero__content swiper-slide" style="background-image: url(assets/images/hero-3@2x.jpg);">
+                <div class="hero__content swiper-slide" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/hero-3@2x.jpg);">
                     <div class="anchor-name"> <strong>Microsoft</strong>  - Office</div>
                     <div class="hero__text">
                         <h2 class="hero__title"> Clean lines <br> <strong> beyond infinity</strong></h2>
@@ -139,14 +136,14 @@
 
             <!-- pagination -->
             <div class="slider-pagination">
-                <a href="" class="slider__arrow slider__arrow--left"> <img src="assets/icons/chevron-left.svg" alt=""> </a>
+                <a href="" class="slider__arrow slider__arrow--left"> <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/chevron-left.svg" alt=""> </a>
                 
                 <div class="slider__meta">
                     <div class="slider__counter"> <strong class="slider__current">01</strong> <span class="slider__total">05</span> </div>
                     <div class="slider__anchor"> <strong>City Hall</strong> - München</div>
                 </div>
                 
-                <a href="" class="slider__arrow slider__arrow--right"> <img src="assets/icons/chevron-right.svg" alt=""> </a>
+                <a href="" class="slider__arrow slider__arrow--right"> <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/chevron-right.svg" alt=""> </a>
             </div>
 
             
@@ -180,7 +177,7 @@
                     </div>
 
                     <figure class="featured__img">
-                        <img src="assets/images/project-1@2x.jpg" alt="image of berlin office">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/project-1@2x.jpg" alt="image of berlin office">
                     </figure>
 
                 </article>
@@ -192,8 +189,8 @@
 
                     <!-- project 1 -->
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-2@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-2@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">New office spaces in central Boston, USA</h3>
@@ -202,8 +199,8 @@
 
                     <!-- project 2 -->
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-3@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-3@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">Beach villa project in Florida and Hawaii</h3>
@@ -212,8 +209,8 @@
 
                     <!-- project 3 -->
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-4@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-4@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">Clean lines and infinity windows for Microsoft HQ</h3>
@@ -222,8 +219,8 @@
 
                     <!-- project 4 -->                        
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-5@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-5@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">Paris Museum expands its exhibition with glass </h3>
@@ -231,8 +228,8 @@
                     </article>
                     <!-- project 5 -->
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-2@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-2@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">New office spaces in central Boston, USA</h3>
@@ -241,8 +238,8 @@
 
                     <!-- project 6 -->
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-3@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-3@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">Beach villa project in Florida and Hawaii</h3>
@@ -251,8 +248,8 @@
 
                     <!-- project 7 -->
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-4@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-4@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">Clean lines and infinity windows for Microsoft HQ</h3>
@@ -261,8 +258,8 @@
 
                     <!-- project 8 -->                        
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-5@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-5@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">Paris Museum expands its exhibition with glass </h3>
@@ -270,8 +267,8 @@
                     </article>
                     <!-- project 9 -->
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-2@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-2@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">New office spaces in central Boston, USA</h3>
@@ -280,8 +277,8 @@
 
                     <!-- project 10 -->
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-3@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-3@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">Beach villa project in Florida and Hawaii</h3>
@@ -290,8 +287,8 @@
 
                     <!-- project 11 -->
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-4@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-4@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">Clean lines and infinity windows for Microsoft HQ</h3>
@@ -300,8 +297,8 @@
 
                     <!-- project 12 -->                        
                     <article class="project swiper-slide">
-                        <header class="project__header" style="background-image: url(assets/images/project-5@2x.jpg);">
-                            <a href="" class="project__readmore"><img src="assets/icons/icon-more.svg" alt=""></a>
+                        <header class="project__header" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/project-5@2x.jpg);">
+                            <a href="" class="project__readmore"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-more.svg" alt=""></a>
                         </header>
 
                         <h3 class="project__title">Paris Museum expands its exhibition with glass </h3>
@@ -326,7 +323,7 @@
                 <article class="workflow">
 
                     <figure class="workflow__img">
-                        <img src="assets/images/about@2x.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about@2x.jpg" alt="">
                     </figure>
 
                     <div class="workflow__text">
@@ -373,7 +370,7 @@
                     <h3 class="newsletter_title">Newsletter</h3>
                     <form action="" class="newsletter__form">
                         <input type="text" class="newsletter__input" placeholder="jane.doe@mail.com">
-                        <button class= "newsletter__submit" type="submit"><img src="assets/icons/arrow.svg" alt=""></button>
+                        <button class= "newsletter__submit" type="submit"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/arrow.svg" alt=""></button>
                         <p class="newsletter__description">By signing up you accept our <strong>privacy policy</strong>  and our <strong>terms</strong>  of handling your personal data.</p>
                     </form>
                 </div>
@@ -381,7 +378,7 @@
                 <div class="site-footer__copyright">
 
                     <div class="site-footer__branding">
-                        <img src="assets/images/logo.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
                     </div>
 
                     <div class="copyright">
@@ -403,5 +400,6 @@
 
         
     </div>
+    <?php wp_footer(); ?>
 </body>
 </html>
