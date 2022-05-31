@@ -101,18 +101,18 @@
             transform: translateY(100px);
         }
 
-        &__item{
+        &__item, li{
             margin: 1rem 0;
 
-            &--current{
-                .menu__link{
+            &--current, &.current-menu-item{
+                .menu__link, a{
                     color: var(--color-dark);
                     font-weight: 600;
                 }
             }
         }
 
-        &__link{
+        &__link, a {
             font-size: var(--font-size-4);
             font-weight: 200;
             color: var(--color-light-medium);
@@ -146,11 +146,11 @@
             gap: 2rem;
         }
 
-        &__link{
+        &__link, a{
             color: var(--color-dark);
         }
 
-        &__item{
+        &__item, li{
             display: flex;
             align-items: center;
             &:first-of-type{

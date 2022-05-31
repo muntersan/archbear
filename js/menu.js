@@ -14,6 +14,24 @@ const siteMenu = () => {
     }
 
     menuButton.addEventListener('click', toggleMenu)
+
+    //add count to menu items
+    const menuItems = menu.querySelectorAll('.menu .menu-item')
+    let i = 1
+
+    menuItems.forEach(item => {
+
+        const countEl = document.createElement('span')
+        countEl.classList.add('menu__count')
+        countEl.innerText = `0${i}.`
+        const linkEl = item.querySelector('a')
+
+        item.insertBefore(countEl, linkEl)
+
+        i++
+
+    })
+
 }
 
 siteMenu()

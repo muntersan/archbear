@@ -58,7 +58,7 @@
                 <figure class="site-menu__image">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu@2x.jpg" alt="">
                 </figure>
-                <div class="menu">
+                <!-- <div class="menu">
                     <ul class="menu__list">
                         <li class="menu__item menu__item--current"><span class="menu__count">01.</span> <a href="" class="menu__link">Home</a></li>
                         <li class="menu__item"><span class="menu__count">02.</span><a href="" class="menu__link">About</a></li>
@@ -66,14 +66,36 @@
                         <li class="menu__item"><span class="menu__count">04.</span><a href="" class="menu__link">Services</a></li>
                         <li class="menu__item"><span class="menu__count">05.</span><a href="" class="menu__link">Contact</a></li>
                     </ul>
-                </div>
-                <div class="social">
+                </div> -->
+
+                <?php 
+                    $args = [
+                        'container_class'   => 'menu',
+                        'menu_class'        => 'menu__list',
+                        'theme_location'    => 'main_menu'
+                    ];
+
+                    wp_nav_menu( $args );
+                ?>
+
+                <!-- <div class="social">
                     <ul class="social__list">
                         <li class="social__item"><a href="" class="social__link">Facebook</a></li>
                         <li class="social__item"><a href="" class="social__link">Instagram</a></li>
                         <li class="social__item"><a href="" class="social__link">Pinterest</a></li>
                     </ul>
-                </div>
+                </div> -->
+
+                <?php 
+                    $args = [
+                        'container_class'   => 'social',
+                        'menu_class'        => 'social__list',
+                        'theme_location'    => 'social_menu'
+                    ];
+
+                    wp_nav_menu($args);
+                ?>
+
             </div>
         </nav>
 
@@ -385,13 +407,23 @@
                         &copy; Copyrigth 2022 Archbear, All rights reserved.
                     </div>
 
-                    <div class="social">
+                    <!-- <div class="social">
                         <ul class="social__list">
                             <li class="social__item"><a href="" class="social__link">Facebook</a></li>
                             <li class="social__item"><a href="" class="social__link">Instagram</a></li>
                             <li class="social__item"><a href="" class="social__link">Pinterest</a></li>
                         </ul>
-                    </div>
+                    </div> -->
+
+                    <?php 
+                        $args = [
+                            'container_class'   => 'social',
+                            'menu_class'        => 'social__list',
+                            'theme_location'    => 'social_menu'
+                        ];
+
+                        wp_nav_menu($args);
+                    ?>
 
                 </div>
             </div>

@@ -19,3 +19,20 @@ function archbear_scripts_and_styles(){
 }
 
 add_action( 'wp_enqueue_scripts', 'archbear_scripts_and_styles'  );
+
+
+/**
+ * Register Menus
+ */
+
+    function archbear_register_menus(){
+
+        $locations = [
+            'main_menu'     => 'Huvudmeny',
+            'social_menu'   => 'Sociala Medier'
+        ];
+        
+        register_nav_menus( $locations);
+    }
+
+    add_action('after_setup_theme', 'archbear_register_menus', 0);
