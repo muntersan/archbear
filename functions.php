@@ -11,7 +11,7 @@
   */
 
 add_image_size( 'project-thumb', 640, 9999, false);
-add_image_size( 'project-portrait', 860, 1300, ['center', 'center'] );
+add_image_size( 'project-portrait', 860, 1300, ['right', 'center'] );
 add_image_size( 'project-hero', 2880, 1920, false );
 
 

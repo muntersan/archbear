@@ -46,7 +46,7 @@ const swiper = new Swiper('.swiper', {
 
         const totalSlidesEl = document.querySelector('.slider__total')
 
-        const slides = document.querySelector('.swiper-slide')
+        const slides = document.querySelector('.hero .swiper-slide')
 
         let totalSlides = slides.length - 2
 

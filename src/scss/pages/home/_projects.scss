@@ -31,10 +31,12 @@
     &__img {
         margin: 0;
         position: relative;
+    
 
         img{
             display: block;
             position: relative;
+            max-height: 650px;
         }
 
         &::after{

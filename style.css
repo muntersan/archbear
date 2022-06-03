@@ -629,6 +629,7 @@ strong {
 .featured__img img {
   display: block;
   position: relative;
+  max-height: 650px;
 }
 .featured__img::after {
   content: "";
